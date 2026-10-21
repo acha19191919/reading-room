@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 运行期数据（只在 ~/.reading-room/ 生成，不进仓库）
+data/
+logs/
+
+# macOS
+.DS_Store
+
+# 编辑器
+.vscode/
+.idea/

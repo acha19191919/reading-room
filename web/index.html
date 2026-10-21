@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>阅历书房</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Hero：精美图片轮播 + 划线轮播 -->
+<header class="hero" id="hero">
+  <div class="hero-veil"></div>
+  <div class="hero-inner">
+    <div class="hero-kicker">阅 历 书 房</div>
+    <div class="hero-quote" id="heroQuote">正在翻开书房…</div>
+    <div class="hero-meta" id="heroMeta"></div>
+  </div>
+  <div class="hero-dots" id="heroDots"></div>
+  <div class="scroll-hint">下 滑 进 入 书 房</div>
+</header>
+
+<!-- 数据概览 -->
+<section class="section">
+  <div class="section-title">OVERVIEW</div>
+  <div class="section-sub">书房概览</div>
+  <div class="stats">
+    <div class="stat"><b id="statBooks">–</b><span>藏书</span></div>
+    <div class="stat"><b id="statHighlights">–</b><span>划线</span></div>
+    <div class="stat"><b id="statThoughts">–</b><span>随笔</span></div>
+    <div class="stat"><b id="statStreak">–</b><span>连续活跃天数</span></div>
+  </div>
+</section>
+
+<!-- 热力图 -->
+<section class="section">
+  <div class="section-title">HEATMAP</div>
+  <div class="section-sub">划线热力图</div>
+  <div class="heatmap-wrap"><div id="heatmap"></div></div>
+</section>
+
+<!-- 书架 -->
+<section class="section">
+  <div class="section-title">SHELF</div>
+  <div class="section-sub">书架 · 点一本书看它的划线</div>
+  <div class="shelf" id="shelf"></div>
+</section>
+
+<!-- 随笔 -->
+<section class="section">
+  <div class="section-title">THOUGHTS</div>
+  <div class="section-sub">随笔时间线</div>
+  <div class="timeline" id="timeline"></div>
+</section>
+
+<footer>阅 历 · 只 管 读 书 &nbsp;&nbsp; 剩 下 的 自 动 记 好<br><span id="ver" style="font-size:10px;opacity:.7"></span></footer>
+
+<!-- 设置 -->
+<button class="settings-fab" id="fab" title="设置">⚙</button>
+<div class="settings-panel" id="settingsPanel">
+  <h3>轮 播 设 置</h3>
+  <div class="set-row">
+    <label>轮播间隔 · <span class="set-val" id="intervalVal"></span></label>
+    <input type="range" id="setInterval" min="30" max="1800" step="30">
+  </div>
+  <div class="switch-row">
+    <span>随笔参与轮播</span>
+    <input type="checkbox" class="switch" id="setThoughts">
+  </div>
+  <div class="set-row">
+    <label>轮播顺序</label>
+    <select id="setMode">
+      <option value="random">随机回顾（推荐）</option>
+      <option value="sequential">按划线时间倒序</option>
+    </select>
+  </div>
+  <button class="btn-primary" id="saveSettings">保存</button>
+  <div class="set-tip">桌面组件点一下 ↻ 按钮，即按新设置重新轮播。<br>把喜欢的图片放进 web/assets/ 并命名为 hero6.jpg、hero7.jpg…，会自动加入首页轮播。</div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
